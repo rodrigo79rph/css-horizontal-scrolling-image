@@ -1,0 +1,28 @@
+<style>
+#animatedBackground {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: url("https://homepages.cae.wisc.edu/~ece533/images/monarch.png");
+  background-repeat: repeat;
+  opacity: .33;
+  background-position: 0 0;
+  background-size: auto 100%;
+/*adjusts this for speed*/
+  animation: animatedBackground 500s linear infinite;
+}
+
+@keyframes animatedBackground {
+  from {
+    background-position: 0 0;
+  }
+/*use negative width if you want it to flow right to left else and positive for left to right*/
+  to {
+    background-position: -10000px 0;
+  }
+}
+</style>
+<div id="animatedBackground" style="height:400px;">
+</div>
